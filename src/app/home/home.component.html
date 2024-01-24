@@ -1,0 +1,12 @@
+@if (loading()) {
+<p>Loading...</p>
+} @else {
+<section class="grid grid-cols-3 gap-4">
+  @for (product of products(); track product.id) {
+  <app-card
+    [product]="product"
+    [routerLink]="['/products', product.id]"
+  ></app-card>
+  }
+</section>
+}

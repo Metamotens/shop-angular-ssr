@@ -1,0 +1,5 @@
+@if (loading()) {
+<p>Loading...</p>
+} @else {
+<app-card [product]="selectedProduct()"></app-card>
+}
